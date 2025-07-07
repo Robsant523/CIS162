@@ -4,8 +4,9 @@ header{
     font-weight: 700;
     margin: 0;
     color: #000000;
-
+    text-align: center;
 }
+
 h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.5em;
@@ -22,17 +23,27 @@ body {
     line-height: 1.6;
     padding: 30px;
     max-width: 1200px;
+    margin: 0 auto; /* Centers the layout */
+}
+
+/* Styled horizontal navigation */
+nav {
+    text-align: center;
+    margin: 20px 0;
 }
 
 nav ul {
-    padding: 5px;
-    margin: 10px;
+    padding: 0;
+    margin: 0;
     background-color: #304a62;
     border-radius: 8px;
+    list-style-type: none;
+    overflow: hidden;
+    display: inline-block;
 }
 
 nav ul li {
-    display: inline-block;
+    float: left;
 }
 
 nav ul li a {
@@ -42,6 +53,7 @@ nav ul li a {
     padding: 15px 25px;
     font-weight: 600;
     transition: background-color 0.3s;
+    text-align: center;
 }
 
 nav ul li a:hover {
@@ -52,6 +64,35 @@ nav ul li a:active {
     background-color: #1a252f;
 }
 
+/* Clear floats after navigation */
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 2-column layout styles */
+.container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#leftColumn {
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #398acd;
+}
+
+#rightColumn {
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #398acd;
+}
+
+/* Regular sections for single column pages */
 section {
     padding: 30px;
     margin: 20px 0;
